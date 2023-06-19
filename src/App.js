@@ -3,6 +3,7 @@ import Navigation from './components/Navigation';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import MenuPage from './pages/MenuPage';
+import OrderNowPage from './pages/OrderNowPage';
 import Footer from './components/Footer';
 import MenuPopUp from './components/MenuPopUp';
 import LeftButtonMenu from './components/LeftButton';
@@ -20,6 +21,7 @@ function App() {
           <Route path='/' element={<HomePage />} />
           <Route path='/menu' element={<MenuPage />} />
           <Route path='/about' element={<AboutPage />} />
+          <Route path='/order-now' element={<OrderNowPage />} />
         </Routes>
       </main>
       <Footer />

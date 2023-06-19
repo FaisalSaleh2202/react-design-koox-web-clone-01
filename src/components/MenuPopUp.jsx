@@ -112,8 +112,25 @@ function MenuPopUp() {
               </>
             ))}
           </motion.ul>
+          <motion.li>
+            {' '}
+            <Link to='/order-now'>
+              {' '}
+              <button
+                style={{
+                  border: 'none',
+                  backgroundColor: 'transparent',
+                  color: '#215732',
+                  fontSize: '28px',
+                  fontFamily: 'rationaltwdemo-light',
+                }}
+                onClick={onOpenHandle}
+              >
+                order now
+              </button>{' '}
+            </Link>
+          </motion.li>
           <motion.li>contact</motion.li>
-          <motion.li>order now</motion.li>
           <InstagramIcon
             style={{
               zIndex: '994',
