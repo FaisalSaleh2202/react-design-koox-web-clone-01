@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import RightButtonMenu from './RightButtonMenu';
@@ -46,9 +46,19 @@ function MenuPopUp() {
     'treats',
   ];
 
+  function onOpenHandle() {
+    setIsOpen((isOpen) => !isOpen);
+  }
+
+  useEffect(() => {
+    function onDirectMenu() {
+      setIsOpen(false);
+    }
+  }, []);
+
   return (
     <>
-      <RightButtonMenu onClick={() => setIsOpen((isOpen) => !isOpen)} />
+      <RightButtonMenu onClick={onOpenHandle} toggle={setIsOpen} />
       <motion.div
         initial={false}
         animate={isOpen ? 'open' : 'closed'}
@@ -68,7 +78,7 @@ function MenuPopUp() {
                   fontSize: '28px',
                   fontFamily: 'rationaltwdemo-light',
                 }}
-                onClick={() => setIsOpen(false)}
+                onClick={onOpenHandle}
               >
                 about
               </button>{' '}
@@ -86,7 +96,7 @@ function MenuPopUp() {
                   fontSize: '28px',
                   fontFamily: 'rationaltwdemo-light',
                 }}
-                onClick={() => setIsOpen(false)}
+                onClick={onOpenHandle}
               >
                 menu
               </button>{' '}

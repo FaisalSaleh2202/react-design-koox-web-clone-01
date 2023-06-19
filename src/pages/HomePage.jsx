@@ -134,7 +134,7 @@ function HomePage() {
             <div className='right'>
               <h1>03</h1>
               <div>
-                cold <br /> pressed
+                cold <br /> and pressed
               </div>
             </div>
           </div>

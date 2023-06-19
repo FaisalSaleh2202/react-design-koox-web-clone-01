@@ -39,6 +39,7 @@ const MenuPage = () => {
             </div>
             <div className='right'>
               <img
+                className='img-shape'
                 src={img_shape}
                 style={{
                   position: 'absolute',
@@ -61,7 +62,7 @@ const MenuPage = () => {
           </div>
           <div className='content'>
             <div className='left'>
-              <div className='price-and__detail_2'>
+              <div className='price-and__detail'>
                 <h2>Hydro Orange</h2>
                 <h1>Rp. 2.000</h1>
                 <button style={{ zIndex: 992 }} onClick={onIsOneHandle}>

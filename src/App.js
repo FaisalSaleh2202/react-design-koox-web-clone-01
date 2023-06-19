@@ -14,6 +14,8 @@ function App() {
         <Navigation style={{ color: 'red' }} />
       </header>
       <main>
+        <LeftButtonMenu />
+        <MenuPopUp />
         <Routes>
           <Route path='/' element={<HomePage />} />
           <Route path='/menu' element={<MenuPage />} />
@@ -21,8 +23,6 @@ function App() {
         </Routes>
       </main>
       <Footer />
-      <LeftButtonMenu />
-      <MenuPopUp />
     </div>
   );
 }
